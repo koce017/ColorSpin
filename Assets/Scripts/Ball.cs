@@ -1,17 +1,19 @@
-using UnityEngine.SceneManagement;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class Ball : MonoBehaviour
 {
     [SerializeField] private float jumpForce;
+    [SerializeField] private float rigidbodyTimer;
+
     [SerializeField] private Color redColor;
     [SerializeField] private Color cyanColor;
     [SerializeField] private Color greenColor;
     [SerializeField] private Color purpleColor;
     [SerializeField] private Color yellowColor;
     [SerializeField] private Color orangeColor;
+    
     [SerializeField] private Button playButton;
     [SerializeField] private TextMeshProUGUI scoreText;
 
@@ -29,6 +31,13 @@ public class Ball : MonoBehaviour
     private void Start()
     {
         SetRandomColor();
+        rigidbody2D.simulated = false;
+        Invoke(nameof(EnableRigidbody), rigidbodyTimer);
+    }
+
+    private void EnableRigidbody()
+    {
+        rigidbody2D.simulated = true;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

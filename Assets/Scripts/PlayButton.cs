@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayButton : MonoBehaviour
 {
-    public void PlayGame()
+    public void PlayLevel(string level)
     {
-        SceneManager.LoadScene("InsideBall");
+        SceneManager.LoadScene(level);
     }
 }

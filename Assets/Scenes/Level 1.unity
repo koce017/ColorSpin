@@ -1838,6 +1838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ball
   jumpForce: 8
+  rigidbodyTimer: 0.69
   redColor: {r: 0.9960785, g: 0.03529412, b: 0, a: 1}
   cyanColor: {r: 0, g: 0.68235296, b: 0.9490197, a: 1}
   greenColor: {r: 0.3647059, g: 0.9960785, b: 0, a: 1}
@@ -2152,7 +2153,7 @@ GameObject:
   - component: {fileID: 2024321610}
   - component: {fileID: 2024321609}
   - component: {fileID: 2024321608}
-  - component: {fileID: 2024321607}
+  - component: {fileID: 2024321611}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -2179,18 +2180,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 169}
   m_SizeDelta: {x: 390, y: 240}
   m_Pivot: {x: 0.5, y: 0}
---- !u!114 &2024321607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024321605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8581b47cffcf3c469f0b5c3a7501f54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayButton
 --- !u!114 &2024321608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2235,16 +2224,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2024321607}
+      - m_Target: {fileID: 2024321611}
         m_TargetAssemblyTypeName: PlayButton, Assembly-CSharp
-        m_MethodName: PlayGame
-        m_Mode: 1
+        m_MethodName: PlayLevel
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Level 1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2024321609
@@ -2285,6 +2274,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024321605}
   m_CullTransparentMesh: 1
+--- !u!114 &2024321611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024321605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8581b47cffcf3c469f0b5c3a7501f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReplayButton
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
