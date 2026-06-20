@@ -39,11 +39,13 @@ public class Ball : MonoBehaviour
             scoreText.text = (int.Parse(scoreText.text) + 1).ToString();
             rigidbody2D.linearVelocity = new Vector2(rigidbody2D.linearVelocity.x, 0f);
             rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            AudioManager.Instance.PlaySfx(AudioManager.Instance.hitSfx);
         }
         else
         {
             gameObject.SetActive(false);
             playButton.gameObject.SetActive(true);
+            AudioManager.Instance.PlaySfx(AudioManager.Instance.loseSfx);
         }
     }
 
