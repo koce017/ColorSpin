@@ -1,53 +1,45 @@
 using UnityEngine;
 
-public class Ball : MonoBehaviour
+public class Ball2 : MonoBehaviour
 {
-    [SerializeField] private float jumpForce;
-    [SerializeField] private float rigidbodyTimer;
-
-    [SerializeField] private Color redColor;
+    [SerializeField] private float speed;
     [SerializeField] private Color cyanColor;
-    [SerializeField] private Color greenColor;
-    [SerializeField] private Color purpleColor;
     [SerializeField] private Color yellowColor;
-    [SerializeField] private Color orangeColor;
+    [SerializeField] private Color pinkColor;
+    [SerializeField] private Color purpleColor;
     
     private string currentColor;
 
-    private new Rigidbody2D rigidbody2D;
     private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Start()
     {
         SetRandomColor();
-        rigidbody2D.simulated = false;
-        Invoke(nameof(EnableRigidbody), rigidbodyTimer);
     }
 
-    private void EnableRigidbody()
+    private void Update()
     {
-        rigidbody2D.simulated = true;
+        transform.position = Vector3.MoveTowards(transform.position, Vector3.zero, speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag(currentColor))
         {
-            SetRandomColor();
+            SpawnManager.Instance.SpawnBall();
             GameManager.Instance.IncreaseScore();
-            rigidbody2D.linearVelocity = new Vector2(rigidbody2D.linearVelocity.x, 0f);
-            rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             AudioManager.Instance.PlaySfx(AudioManager.Instance.hitSfx);
+            Destroy(gameObject);
         }
         else
         {
             gameObject.SetActive(false);
+            SpawnManager.Instance.Disable();
             GameManager.Instance.SetPlayButtonActive(true);
             AudioManager.Instance.PlaySfx(AudioManager.Instance.loseSfx);
         }
@@ -56,35 +48,27 @@ public class Ball : MonoBehaviour
     private void SetRandomColor()
     {
         Color color;
-        switch (Random.Range(0, 7))
+        switch (Random.Range(0, 4))
         {
             case 0:
-                color = redColor;
-                currentColor = "Red";
-                break;
-            case 1:
                 color = cyanColor;
                 currentColor = "Cyan";
                 break;
-            case 2:
-                currentColor = "Green";
-                color = greenColor;
-                break;
-            case 3:
+            case 1:
                 currentColor = "Purple";
                 color = purpleColor;
                 break;
-            case 4:
+            case 2:
                 currentColor = "Yellow";
                 color = yellowColor;
                 break;
-            case 5:
+            case 3:
             default:
-                currentColor = "Orange";
-                color = orangeColor;
+                currentColor = "Pink";
+                color = pinkColor;
                 break;
         }
-        
+
         spriteRenderer.color = color;
         GameManager.Instance.UpdateScoreColor(color);
     }
