@@ -1,6 +1,7 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Ball : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Ball : MonoBehaviour
     [SerializeField] private Color purpleColor;
     [SerializeField] private Color yellowColor;
     [SerializeField] private Color orangeColor;
+    [SerializeField] private Button playButton;
     [SerializeField] private TextMeshProUGUI scoreText;
 
     private string currentColor;
@@ -40,7 +42,8 @@ public class Ball : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            gameObject.SetActive(false);
+            playButton.gameObject.SetActive(true);
         }
     }
 
