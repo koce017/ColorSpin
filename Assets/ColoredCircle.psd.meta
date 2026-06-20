@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 59f16469e7c13f3419563fe111394d35
+guid: 3b0f40c20fcde4f4f8219fac43eea494
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6893326603507580621
-    second: Small Circle_0
+      213: 7823828834149703224
+    second: ColoredCircle_0
   - first:
-      213: -2467311802798988577
-    second: Small Circle_1
+      213: -8344431916082136171
+    second: ColoredCircle_1
   - first:
-      213: -4889228310719182122
-    second: Small Circle_2
+      213: -8336676061091028734
+    second: ColoredCircle_2
   - first:
-      213: -3555380709154224565
-    second: Small Circle_3
+      213: -5129451238101597182
+    second: ColoredCircle_3
+  - first:
+      213: 4877258321110517794
+    second: ColoredCircle_4
+  - first:
+      213: -326310493731316605
+    second: ColoredCircle_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,89 +128,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Small Circle_0
+      name: ColoredCircle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 205
-        width: 166
-        height: 166
+        x: 41
+        y: 289
+        width: 132
+        height: 111
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3314e2df9fbf550a0800000000000000
-      internalID: -6893326603507580621
+      spriteID: 83e93fa4fd2d39c60800000000000000
+      internalID: 7823828834149703224
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Small Circle_1
+      name: ColoredCircle_1
       rect:
         serializedVersion: 2
-        x: 202
-        y: 205
-        width: 166
-        height: 166
+        x: 219
+        y: 289
+        width: 132
+        height: 111
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd2a90cdcf852cdd0800000000000000
-      internalID: -2467311802798988577
+      spriteID: 59bfd7d026f923c80800000000000000
+      internalID: -8344431916082136171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Small Circle_2
+      name: ColoredCircle_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 166
-        height: 166
+        x: 11
+        y: 124
+        width: 49
+        height: 152
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6daccc171c8f52cb0800000000000000
-      internalID: -4889228310719182122
+      spriteID: 201aa23ca4d2e4c80800000000000000
+      internalID: -8336676061091028734
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Small Circle_3
+      name: ColoredCircle_3
       rect:
         serializedVersion: 2
-        x: 202
-        y: 0
-        width: 166
-        height: 166
+        x: 51
+        y: 23
+        width: 132
+        height: 93
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b46069d0510c8aec0800000000000000
-      internalID: -3555380709154224565
+      spriteID: 2044444a64780d8b0800000000000000
+      internalID: -5129451238101597182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ColoredCircle_4
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 23
+        width: 132
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2284c9b2a908fa340800000000000000
+      internalID: 4877258321110517794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ColoredCircle_5
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 124
+        width: 55
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38c99a6b556b87bf0800000000000000
+      internalID: -326310493731316605
       vertices: []
       indices: 
       edges: []
@@ -213,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8a8f7651047b2264aa7288e1d2602da6
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +273,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Small Circle_0: -6893326603507580621
-      Small Circle_1: -2467311802798988577
-      Small Circle_2: -4889228310719182122
-      Small Circle_3: -3555380709154224565
+      ColoredCircle_0: 7823828834149703224
+      ColoredCircle_1: -8344431916082136171
+      ColoredCircle_2: -8336676061091028734
+      ColoredCircle_3: -5129451238101597182
+      ColoredCircle_4: 4877258321110517794
+      ColoredCircle_5: -326310493731316605
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

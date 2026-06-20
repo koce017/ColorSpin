@@ -5,10 +5,12 @@ using TMPro;
 public class Ball : MonoBehaviour
 {
     [SerializeField] private float jumpForce;
+    [SerializeField] private Color redColor;
     [SerializeField] private Color cyanColor;
+    [SerializeField] private Color greenColor;
+    [SerializeField] private Color purpleColor;
     [SerializeField] private Color yellowColor;
-    [SerializeField] private Color pinkColor;
-    [SerializeField] private Color magentaColor;
+    [SerializeField] private Color orangeColor;
     [SerializeField] private TextMeshProUGUI scoreText;
 
     private string currentColor;
@@ -44,27 +46,37 @@ public class Ball : MonoBehaviour
 
     private void SetRandomColor()
     {
-        switch (Random.Range(0, 4))
+        switch (Random.Range(0, 6))
         {
             case 0:
+                currentColor = "Red";
+                scoreText.color = redColor;
+                spriteRenderer.color = redColor;
+                break;
+            case 1:
                 currentColor = "Cyan";
                 scoreText.color = cyanColor;
                 spriteRenderer.color = cyanColor;
                 break;
-            case 1:
+            case 2:
+                currentColor = "Green";
+                scoreText.color = greenColor;
+                spriteRenderer.color = greenColor;
+                break;
+            case 3:
+                currentColor = "Purple";
+                scoreText.color = purpleColor;
+                spriteRenderer.color = purpleColor;
+                break;
+            case 4:
                 currentColor = "Yellow";
                 scoreText.color = yellowColor;
                 spriteRenderer.color = yellowColor;
                 break;
-            case 2:
-                currentColor = "Pink";
-                scoreText.color = pinkColor;
-                spriteRenderer.color = pinkColor;
-                break;
-            case 3:
-                currentColor = "Magenta";
-                scoreText.color = magentaColor;
-                spriteRenderer.color = magentaColor;
+            case 5:
+                currentColor = "Orange";
+                scoreText.color = orangeColor;
+                spriteRenderer.color = orangeColor;
                 break;
         }
     }
