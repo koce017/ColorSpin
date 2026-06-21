@@ -361,7 +361,7 @@ MonoBehaviour:
   musicSource: {fileID: 721565680}
   hitSfx: {fileID: 8300000, guid: 0f098abefdd804e47bc0b94372bfcf66, type: 3}
   spinSfx: {fileID: 8300000, guid: 33a52a9ae502681468e00fdbb19bccd4, type: 3}
-  loseSfx: {fileID: 8300000, guid: f02f95762ad744a43aa7abcc30ecd66e, type: 3}
+  loseSfx: {fileID: 8300000, guid: 2a9ab7f5fe1fb574f93b05210dcbd8cf, type: 3}
   backgroundMusic: {fileID: 8300000, guid: f48a69721280ce94eb61008c1d70c0ba, type: 3}
 --- !u!4 &136124165
 Transform:
@@ -2438,7 +2438,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -203, y: 0}
+  m_AnchoredPosition: {x: -195, y: 0}
   m_SizeDelta: {x: 390, y: 240}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2024321608

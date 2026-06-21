@@ -170,12 +170,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ball
   jumpForce: 8
-  rigidbodyTimer: 0.69
+  rigidbodyTimer: 1
   redColor: {r: 0.9960785, g: 0.03529412, b: 0, a: 1}
   cyanColor: {r: 0, g: 0.68235296, b: 0.9490197, a: 1}
   greenColor: {r: 0.3647059, g: 0.9960785, b: 0, a: 1}
   purpleColor: {r: 0.6901961, g: 0, b: 0.9960785, a: 1}
   yellowColor: {r: 0.9921569, g: 0.89019614, b: 0, a: 1}
   orangeColor: {r: 0.9960785, g: 0.57254905, b: 0, a: 1}
-  playButton: {fileID: 0}
-  scoreText: {fileID: 0}

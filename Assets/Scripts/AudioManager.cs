@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    public static AudioManager Instance { get; private set; }
+    
     [Header("Audio Sources")]
     [SerializeField] private AudioSource sfxSource;
     [SerializeField] private AudioSource musicSource;
@@ -11,8 +13,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip spinSfx;
     public AudioClip loseSfx;
     public AudioClip backgroundMusic;
-
-    public static AudioManager Instance { get; private set; }
 
     private void Awake()
     {
