@@ -39,13 +39,13 @@ public class Ball2 : MonoBehaviour
         {
             SpawnManager.Instance.SpawnBall();
             GameManager.Instance.IncreaseScore();
-            AudioManager.Instance.PlaySfx(AudioManager.Instance.hitSfx);
+            SfxManager.Instance.Play("hit");
         }
         else
         {
             SpawnManager.Instance.Disable();
             GameManager.Instance.SetMenuButtonsActive(true);
-            AudioManager.Instance.PlaySfx(AudioManager.Instance.loseSfx);
+            SfxManager.Instance.Play("lose");
         }
     }
 

@@ -17,12 +17,12 @@ public class Circle : MonoBehaviour
     public void RotateLeft()
     {
         transform.Rotate(0f, 0f, 60f);
-        AudioManager.Instance.PlaySfx(AudioManager.Instance.spinSfx);
+        SfxManager.Instance.Play("spin");
     }
 
     public void RotateRight()
     {
         transform.Rotate(0f, 0f, -60f);
-        AudioManager.Instance.PlaySfx(AudioManager.Instance.spinSfx);
+        SfxManager.Instance.Play("spin");
     }
 }

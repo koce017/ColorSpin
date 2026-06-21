@@ -43,13 +43,13 @@ public class Ball : MonoBehaviour
             GameManager.Instance.IncreaseScore();
             rigidbody2D.linearVelocity = new Vector2(rigidbody2D.linearVelocity.x, 0f);
             rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            AudioManager.Instance.PlaySfx(AudioManager.Instance.hitSfx);
+            SfxManager.Instance.Play("hit");
         }
         else
         {
             gameObject.SetActive(false);
             GameManager.Instance.SetMenuButtonsActive(true);
-            AudioManager.Instance.PlaySfx(AudioManager.Instance.loseSfx);
+            SfxManager.Instance.Play("lose");
         }
     }
 
