@@ -13,17 +13,13 @@ public class SfxManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            sfxLibrary = GetComponent<SfxLibrary>();
+            audioSource = GetComponent<AudioSource>();
         }
         else
         {
             Destroy(gameObject);
         }
-    }
-
-    private void Start()
-    {
-        sfxLibrary = GetComponent<SfxLibrary>();
-        audioSource = GetComponent<AudioSource>();
     }
 
     public void Play(string name)
