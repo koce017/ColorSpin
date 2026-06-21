@@ -48,7 +48,7 @@ public class Ball : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
-            GameManager.Instance.SetPlayButtonActive(true);
+            GameManager.Instance.SetMenuButtonsActive(true);
             AudioManager.Instance.PlaySfx(AudioManager.Instance.loseSfx);
         }
     }

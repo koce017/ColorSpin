@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     [SerializeField] private Button playButton;
+    [SerializeField] private Button quitButton;
     [SerializeField] private TextMeshProUGUI scoreText;
 
     private int score;
@@ -49,8 +50,9 @@ public class GameManager : MonoBehaviour
         scoreText.color = color;
     }
 
-    public void SetPlayButtonActive(bool isActive)
+    public void SetMenuButtonsActive(bool isActive)
     {
         playButton.gameObject.SetActive(isActive);
+        quitButton.gameObject.SetActive(isActive);
     }
 }

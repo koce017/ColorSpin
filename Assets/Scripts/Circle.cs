@@ -2,17 +2,27 @@ using UnityEngine;
 
 public class Circle : MonoBehaviour
 {
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            transform.Rotate(0f, 0f, 60f);
-            AudioManager.Instance.PlaySfx(AudioManager.Instance.spinSfx);
+            RotateLeft();
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            transform.Rotate(0f, 0f, -60f);
-            AudioManager.Instance.PlaySfx(AudioManager.Instance.spinSfx);
+            RotateRight();
         }
+    }
+
+    public void RotateLeft()
+    {
+        transform.Rotate(0f, 0f, 60f);
+        AudioManager.Instance.PlaySfx(AudioManager.Instance.spinSfx);
+    }
+
+    public void RotateRight()
+    {
+        transform.Rotate(0f, 0f, -60f);
+        AudioManager.Instance.PlaySfx(AudioManager.Instance.spinSfx);
     }
 }
