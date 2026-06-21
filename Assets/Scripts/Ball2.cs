@@ -9,6 +9,7 @@ public class Ball2 : MonoBehaviour
     [SerializeField] private Color purpleColor;
     
     private string currentColor;
+    private bool hasBeenDestroyed;
 
     private SpriteRenderer spriteRenderer;
 
@@ -29,16 +30,19 @@ public class Ball2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (hasBeenDestroyed) return;
+
+        Destroy(gameObject);
+        hasBeenDestroyed = true;
+
         if (other.CompareTag(currentColor))
         {
             SpawnManager.Instance.SpawnBall();
             GameManager.Instance.IncreaseScore();
             AudioManager.Instance.PlaySfx(AudioManager.Instance.hitSfx);
-            Destroy(gameObject);
         }
         else
         {
-            gameObject.SetActive(false);
             SpawnManager.Instance.Disable();
             GameManager.Instance.SetPlayButtonActive(true);
             AudioManager.Instance.PlaySfx(AudioManager.Instance.loseSfx);

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6359045120308269906}
   - component: {fileID: 1315592014377178905}
   - component: {fileID: 6358260331564527875}
-  - component: {fileID: -8859924018842343325}
   - component: {fileID: -8789918984357586473}
+  - component: {fileID: -8859924018842343325}
   m_Layer: 0
   m_Name: Ball2
   m_TagString: Untagged
@@ -130,23 +130,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.50000006
---- !u!114 &-8859924018842343325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8484987115672482159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cd3f14b0132ccb4d88e68781eea1f2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Ball2
-  speed: 5
-  cyanColor: {r: 0.20392159, g: 0.8862746, b: 0.9490197, a: 1}
-  yellowColor: {r: 0.96470594, g: 0.8745099, b: 0.054901965, a: 1}
-  pinkColor: {r: 0.9960785, g: 0, b: 0.5019608, a: 1}
-  purpleColor: {r: 0.54901963, g: 0.07450981, b: 0.9803922, a: 1}
 --- !u!50 &-8789918984357586473
 Rigidbody2D:
   serializedVersion: 5
@@ -174,3 +157,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-8859924018842343325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8484987115672482159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cd3f14b0132ccb4d88e68781eea1f2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ball2
+  speed: 5
+  cyanColor: {r: 0.20392159, g: 0.8862746, b: 0.9490197, a: 1}
+  yellowColor: {r: 0.96470594, g: 0.8745099, b: 0.054901965, a: 1}
+  pinkColor: {r: 0.9960785, g: 0, b: 0.5019608, a: 1}
+  purpleColor: {r: 0.54901963, g: 0.07450981, b: 0.9803922, a: 1}
