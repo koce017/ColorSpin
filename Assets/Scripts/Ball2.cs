@@ -38,7 +38,8 @@ public class Ball2 : MonoBehaviour
 
         if (other.CompareTag(currentColor))
         {
-            SpawnManager.Instance.SpawnBall();
+         
+            SpawnManager.Instance.Hit();
             GameManager.Instance.IncreaseScore();
             SfxManager.Instance.Play("hit");
         }

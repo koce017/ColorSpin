@@ -365,7 +365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 207609423}
   m_Layer: 0
-  m_Name: Top-Left
+  m_Name: TopLeft
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -745,7 +745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 829755911}
   m_Layer: 0
-  m_Name: Bottom-Left
+  m_Name: BottomLeft
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -814,6 +814,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e89696f71913d49b044fde04e9b069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawner
+  secondBallDelay: 0.97
+  secondBallChance: 0.123
   ballPrefab: {fileID: 8484987115672482159, guid: 785c09f53f4a0534ea5faecafd231339, type: 3}
   spawnPoints:
   - {fileID: 207609422}
@@ -975,7 +977,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1183415927}
   m_Layer: 0
-  m_Name: Top-Right
+  m_Name: TopRight
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1646,7 +1648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1738790461}
   m_Layer: 0
-  m_Name: Bottom-iRight
+  m_Name: BottomRight
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
