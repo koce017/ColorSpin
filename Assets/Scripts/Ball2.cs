@@ -9,7 +9,8 @@ public class Ball2 : MonoBehaviour
     [SerializeField] private Color purpleColor;
     
     private string currentColor;
-    private bool hasBeenDestroyed;
+    
+    private bool collidedOnce;
 
     private SpriteRenderer spriteRenderer;
 
@@ -30,10 +31,10 @@ public class Ball2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (hasBeenDestroyed) return;
+        if (collidedOnce) return;
 
         Destroy(gameObject);
-        hasBeenDestroyed = true;
+        collidedOnce = true;
 
         if (other.CompareTag(currentColor))
         {
