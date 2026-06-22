@@ -17,12 +17,10 @@ public class Circle : MonoBehaviour
     public void RotateLeft()
     {
         transform.Rotate(0f, 0f, 60f);
-        SfxManager.Instance.Play("spin");
     }
 
     public void RotateRight()
     {
         transform.Rotate(0f, 0f, -60f);
-        SfxManager.Instance.Play("spin");
     }
 }

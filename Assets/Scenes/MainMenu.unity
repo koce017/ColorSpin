@@ -1133,9 +1133,6 @@ MonoBehaviour:
   - name: hit
     clips:
     - {fileID: 8300000, guid: 72a8cd89a7cf80642bb0a5d24bce6440, type: 3}
-  - name: spin
-    clips:
-    - {fileID: 8300000, guid: 33a52a9ae502681468e00fdbb19bccd4, type: 3}
   - name: lose
     clips:
     - {fileID: 8300000, guid: 2a9ab7f5fe1fb574f93b05210dcbd8cf, type: 3}
