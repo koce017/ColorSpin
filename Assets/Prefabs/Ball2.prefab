@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 8484987115672482159}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.291, z: 0}
-  m_LocalScale: {x: 0.56, y: 0.56, z: 0.56}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd3f14b0132ccb4d88e68781eea1f2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ball2
-  speed: 5
+  speed: 3
   cyanColor: {r: 0.20392159, g: 0.8862746, b: 0.9490197, a: 1}
   yellowColor: {r: 0.96470594, g: 0.8745099, b: 0.054901965, a: 1}
   pinkColor: {r: 0.9960785, g: 0, b: 0.5019608, a: 1}

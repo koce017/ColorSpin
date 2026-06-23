@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f0eb3af749de7c45b1121650c81c210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ball
-  jumpForce: 8
+  jumpForce: 7.25
   rigidbodyTimer: 1
   redColor: {r: 0.9960785, g: 0.03529412, b: 0, a: 1}
   cyanColor: {r: 0, g: 0.68235296, b: 0.9490197, a: 1}
