@@ -42,16 +42,16 @@ public class Ball : MonoBehaviour
         if (other.CompareTag(currentColorName))
         {
             SetRandomColor();
+            SfxManager.Instance.Play("hit");
             GameManager.Instance.IncreaseScore();
             rigidbody2D.linearVelocity = new Vector2(rigidbody2D.linearVelocity.x, 0f);
             rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            SfxManager.Instance.Play("hit");
         }
         else
         {
+            Destroy(gameObject);
             InstaniateShatterEffect();
-            gameObject.SetActive(false);
-            GameManager.Instance.SetMenuButtonsActive(true);
+            GameManager.Instance.EndGame();
             SfxManager.Instance.Play("shatter");
         }
     }

@@ -50,9 +50,17 @@ public class GameManager : MonoBehaviour
         scoreText.color = color;
     }
 
-    public void SetMenuButtonsActive(bool isActive)
+    public void EndGame()
     {
-        playButton.gameObject.SetActive(isActive);
-        quitButton.gameObject.SetActive(isActive);
+        playButton.gameObject.SetActive(true);
+        quitButton.gameObject.SetActive(true);
+
+        string scoreKey = SceneManager.GetActiveScene().name + "Score";
+        int highscore = PlayerPrefs.GetInt(scoreKey, 0);
+
+        if (score > highscore)
+        {
+            PlayerPrefs.SetInt(scoreKey, score);
+        }
     }
 }

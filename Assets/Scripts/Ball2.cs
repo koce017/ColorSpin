@@ -48,7 +48,7 @@ public class Ball2 : MonoBehaviour
         {
             InstaniateShatterEffect();
             SpawnManager.Instance.Disable();
-            GameManager.Instance.SetMenuButtonsActive(true);
+            GameManager.Instance.EndGame();
             SfxManager.Instance.Play("shatter");
         }
     }
