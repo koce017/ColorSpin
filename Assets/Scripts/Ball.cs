@@ -11,8 +11,10 @@ public class Ball : MonoBehaviour
     [SerializeField] private Color purpleColor;
     [SerializeField] private Color yellowColor;
     [SerializeField] private Color orangeColor;
+    [SerializeField] private GameObject shatterEffect;
     
-    private string currentColor;
+    private string currentColorName;
+    private Color currentColorValue;
 
     private new Rigidbody2D rigidbody2D;
     private SpriteRenderer spriteRenderer;
@@ -37,7 +39,7 @@ public class Ball : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(currentColor))
+        if (other.CompareTag(currentColorName))
         {
             SetRandomColor();
             GameManager.Instance.IncreaseScore();
@@ -47,45 +49,56 @@ public class Ball : MonoBehaviour
         }
         else
         {
+            InstaniateShatterEffect();
             gameObject.SetActive(false);
             GameManager.Instance.SetMenuButtonsActive(true);
-            SfxManager.Instance.Play("lose");
+            SfxManager.Instance.Play("shatter");
         }
+    }
+
+    private void InstaniateShatterEffect()
+    {
+        var effect = Instantiate(shatterEffect, transform.position, Quaternion.identity);
+        var ps = effect.GetComponent<ParticleSystem>();
+
+        var main = ps.main;
+        main.startColor = currentColorValue;
+
+        ps.Play();
     }
 
     private void SetRandomColor()
     {
-        Color color;
         switch (Random.Range(0, 7))
         {
             case 0:
-                color = redColor;
-                currentColor = "Red";
+                currentColorName = "Red";
+                currentColorValue = redColor;
                 break;
             case 1:
-                color = cyanColor;
-                currentColor = "Cyan";
+                currentColorName = "Cyan";
+                currentColorValue = cyanColor;
                 break;
             case 2:
-                currentColor = "Green";
-                color = greenColor;
+                currentColorName = "Green";
+                currentColorValue = greenColor;
                 break;
             case 3:
-                currentColor = "Purple";
-                color = purpleColor;
+                currentColorName = "Purple";
+                currentColorValue = purpleColor;
                 break;
             case 4:
-                currentColor = "Yellow";
-                color = yellowColor;
+                currentColorName = "Yellow";
+                currentColorValue = yellowColor;
                 break;
             case 5:
             default:
-                currentColor = "Orange";
-                color = orangeColor;
+                currentColorName = "Orange";
+                currentColorValue = orangeColor;
                 break;
         }
         
-        spriteRenderer.color = color;
-        GameManager.Instance.UpdateScoreColor(color);
+        spriteRenderer.color = currentColorValue;
+        GameManager.Instance.UpdateScoreColor(currentColorValue);
     }
 }

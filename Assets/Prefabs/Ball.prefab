@@ -177,3 +177,4 @@ MonoBehaviour:
   purpleColor: {r: 0.6901961, g: 0, b: 0.9960785, a: 1}
   yellowColor: {r: 0.9921569, g: 0.89019614, b: 0, a: 1}
   orangeColor: {r: 0.9960785, g: 0.57254905, b: 0, a: 1}
+  shatterEffect: {fileID: 6579836612414868694, guid: 17cdded338773394692cc6f4f5a103d4, type: 3}

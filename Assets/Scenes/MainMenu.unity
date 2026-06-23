@@ -1209,9 +1209,9 @@ MonoBehaviour:
   - name: hit
     clips:
     - {fileID: 8300000, guid: 72a8cd89a7cf80642bb0a5d24bce6440, type: 3}
-  - name: lose
+  - name: shatter
     clips:
-    - {fileID: 8300000, guid: 2a9ab7f5fe1fb574f93b05210dcbd8cf, type: 3}
+    - {fileID: 8300000, guid: 876cadd621bf52c42888c9c8479a6ad4, type: 3}
 --- !u!82 &2073292799
 AudioSource:
   m_ObjectHideFlags: 0
