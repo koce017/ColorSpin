@@ -325,9 +325,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 96355205}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b89b39d4eabc7f94a9a4d8a5a1ee5c7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 66ad3fabbfda5014d9a6df8efc28ef19, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SmallCircle
+  m_EditorClassIdentifier: Assembly-CSharp::Circle1
+  pulseDuration: 0.2
+  pulseTargetScale: 1.25
 --- !u!1 &282184730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,8 +1258,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1169078491}
-        m_TargetAssemblyTypeName: ArrowButton, Assembly-CSharp
+      - m_Target: {fileID: 96355207}
+        m_TargetAssemblyTypeName: Circle1, Assembly-CSharp
         m_MethodName: RotateRight
         m_Mode: 1
         m_Arguments:
@@ -1666,8 +1668,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1604574621}
-        m_TargetAssemblyTypeName: ArrowButton, Assembly-CSharp
+      - m_Target: {fileID: 96355207}
+        m_TargetAssemblyTypeName: Circle1, Assembly-CSharp
         m_MethodName: RotateLeft
         m_Mode: 1
         m_Arguments:

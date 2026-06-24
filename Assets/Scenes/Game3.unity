@@ -1022,7 +1022,7 @@ Transform:
   m_GameObject: {fileID: 1150203815}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.015, y: 0, z: 0}
+  m_LocalPosition: {x: 0.001, y: 0.056, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1275,7 +1275,7 @@ Transform:
   m_GameObject: {fileID: 1402007307}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.013, y: -2.819, z: 0}
+  m_LocalPosition: {x: 0.0045, y: -2.8229, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1456,8 +1456,8 @@ Transform:
   m_Children:
   - {fileID: 1945645860}
   - {fileID: 1150203816}
-  - {fileID: 155038668}
   - {fileID: 1402007308}
+  - {fileID: 155038668}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -135}
 --- !u!114 &1806404954
@@ -1472,6 +1472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b10ec47fe82334c9fde7b4e445bd24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Circle3
+  duration: 0
+  targetScale: 0
 --- !u!1 &1945645859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,7 +1501,7 @@ Transform:
   m_GameObject: {fileID: 1945645859}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.869639, y: 0, z: 0}
+  m_LocalPosition: {x: -2.884, y: 0.059, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

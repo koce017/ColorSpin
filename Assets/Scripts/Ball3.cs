@@ -1,18 +1,12 @@
 using UnityEngine;
 
-public class Ball3 : MonoBehaviour
+public class Ball3 : Ball
 {
     [SerializeField] private float speed;
     [SerializeField] private Color cyanColor;
     [SerializeField] private Color yellowColor;
     [SerializeField] private Color greenColor;
     [SerializeField] private Color redColor;
-    [SerializeField] private GameObject shatterEffect;
-    
-    private string currentColorName;
-    private Color currentColorValue;
-
-    private bool collidedOnce;
 
     private new Rigidbody2D rigidbody2D;
     private SpriteRenderer spriteRenderer;
@@ -35,34 +29,20 @@ public class Ball3 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collidedOnce) return;
-
         Destroy(gameObject);
-        collidedOnce = true;
-
         if (other.CompareTag(currentColorName))
         {
-            GameManager.Instance.IncreaseScore();
             SfxManager.Instance.Play("hit");
+            GameManager.Instance.IncreaseScore();
+            other.GetComponentInParent<Circle>().Bounce();
         }
         else
         {
             InstaniateShatterEffect();
-            SpawnManager3.Instance.Disable();
             GameManager.Instance.EndGame();
+            SpawnManager3.Instance.Disable();
             SfxManager.Instance.Play("shatter");
         }
-    }
-
-    private void InstaniateShatterEffect()
-    {
-        var effect = Instantiate(shatterEffect, transform.position, Quaternion.identity);
-        var ps = effect.GetComponent<ParticleSystem>();
-
-        var main = ps.main;
-        main.startColor = currentColorValue;
-
-        ps.Play();
     }
 
     private void SetRandomColor()

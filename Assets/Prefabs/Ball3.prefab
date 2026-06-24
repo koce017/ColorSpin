@@ -169,9 +169,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8b0fe1927583f4594b5c13bed50a97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ball3
+  shatterEffect: {fileID: 6579836612414868694, guid: 17cdded338773394692cc6f4f5a103d4, type: 3}
   speed: 6
   cyanColor: {r: 0, g: 0.48235297, b: 1, a: 1}
   yellowColor: {r: 0.9921569, g: 0.8862746, b: 0, a: 1}
   greenColor: {r: 0.37254903, g: 1, b: 0.27058825, a: 1}
   redColor: {r: 0.9960785, g: 0.03529412, b: 0, a: 1}
-  shatterEffect: {fileID: 6579836612414868694, guid: 17cdded338773394692cc6f4f5a103d4, type: 3}

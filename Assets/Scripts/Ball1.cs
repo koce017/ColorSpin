@@ -1,50 +1,53 @@
 using UnityEngine;
 
-public class Ball2 : Ball
+public class Ball1 : Ball
 {
-    [SerializeField] private float speed;
+    [SerializeField] private float jumpForce;
+    [SerializeField] private float rigidbodyTimer;
+
+    [SerializeField] private Color redColor;
     [SerializeField] private Color cyanColor;
-    [SerializeField] private Color yellowColor;
-    [SerializeField] private Color pinkColor;
+    [SerializeField] private Color greenColor;
     [SerializeField] private Color purpleColor;
-
-    private bool oneTriggerActivated;
-
+    [SerializeField] private Color yellowColor;
+    [SerializeField] private Color orangeColor;
+    
+    private new Rigidbody2D rigidbody2D;
     private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
+        rigidbody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Start()
     {
         SetRandomColor();
+        rigidbody2D.simulated = false;
+        Invoke(nameof(EnableRigidbody), rigidbodyTimer);
     }
 
-    private void Update()
+    private void EnableRigidbody()
     {
-        transform.position = Vector3.MoveTowards(transform.position, Vector3.zero, speed * Time.deltaTime);
+        rigidbody2D.simulated = true;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (oneTriggerActivated) return;
-
-        Destroy(gameObject);
-        oneTriggerActivated = true;
-
         if (other.CompareTag(currentColorName))
         {
-            SpawnManager2.Instance.Hit();
+            SetRandomColor();
             SfxManager.Instance.Play("hit");
             GameManager.Instance.IncreaseScore();
             other.GetComponentInParent<Circle>().Bounce();
+            rigidbody2D.linearVelocity = new Vector2(rigidbody2D.linearVelocity.x, 0f);
+            rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
         else
         {
+            Destroy(gameObject);
             InstaniateShatterEffect();
-            SpawnManager2.Instance.Disable();
             GameManager.Instance.EndGame();
             SfxManager.Instance.Play("shatter");
         }
@@ -52,27 +55,35 @@ public class Ball2 : Ball
 
     private void SetRandomColor()
     {
-        switch (Random.Range(0, 4))
+        switch (Random.Range(0, 7))
         {
             case 0:
+                currentColorName = "Red";
+                currentColorValue = redColor;
+                break;
+            case 1:
                 currentColorName = "Cyan";
                 currentColorValue = cyanColor;
                 break;
-            case 1:
+            case 2:
+                currentColorName = "Green";
+                currentColorValue = greenColor;
+                break;
+            case 3:
                 currentColorName = "Purple";
                 currentColorValue = purpleColor;
                 break;
-            case 2:
+            case 4:
                 currentColorName = "Yellow";
                 currentColorValue = yellowColor;
                 break;
-            case 3:
+            case 5:
             default:
-                currentColorName = "Pink";
-                currentColorValue = pinkColor;
+                currentColorName = "Orange";
+                currentColorValue = orangeColor;
                 break;
         }
-
+        
         spriteRenderer.color = currentColorValue;
         GameManager.Instance.UpdateScoreColor(currentColorValue);
     }

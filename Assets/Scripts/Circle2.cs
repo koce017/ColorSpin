@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Circle2 : MonoBehaviour
+public class Circle2 : Circle
 {
     [SerializeField] private float rotationOffset = 0f; 
 

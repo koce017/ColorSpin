@@ -1,11 +1,12 @@
 using UnityEngine;
 
-public class Circle3 : MonoBehaviour
+public class Circle3 : Circle
 {
     private Vector3 centerPoint;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         centerPoint = GetChildrenCenter();
     }
 
