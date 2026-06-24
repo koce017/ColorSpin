@@ -5,34 +5,25 @@ using System.Collections.Generic;
 public struct SoundEffectGroup
 {
     public string name;
-    public List<AudioClip> clips;
+    public AudioClip clip;
 }
 
 public class SfxLibrary : MonoBehaviour
 {
     [SerializeField] private SoundEffectGroup[] soundEffectGroups;
 
-    private Dictionary<string, List<AudioClip>> soundDictionary = new();
+    private Dictionary<string, AudioClip> soundDictionary = new();
 
     private void Awake()
     {
         foreach (var soundEffectGroup in soundEffectGroups)
         {
-            soundDictionary[soundEffectGroup.name] = soundEffectGroup.clips;
+            soundDictionary[soundEffectGroup.name] = soundEffectGroup.clip;
         }
     }
 
     public AudioClip GetClip(string name)
     {
-        if (soundDictionary.ContainsKey(name))
-        {
-            var audioClips = soundDictionary[name];
-            
-            if (audioClips.Count > 0)
-            {
-                return audioClips[Random.Range(0, audioClips.Count)];
-            }
-        }
-        return null;
+        return soundDictionary.GetValueOrDefault(name);
     }
 }

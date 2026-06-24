@@ -445,9 +445,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   tracks:
-  - {fileID: 8300000, guid: f48a69721280ce94eb61008c1d70c0ba, type: 3}
-  - {fileID: 8300000, guid: cf448c7b7c09ca941b88d0ff72ffea1b, type: 3}
-  - {fileID: 8300000, guid: 366b148cba0e4ce479ddbea1e9805eaa, type: 3}
+  - {fileID: 8300000, guid: 25978e893dfe07a4dacad7c96df9cea4, type: 3}
+  - {fileID: 8300000, guid: 0ddd61787ab6d46418aa8c60d07e5d19, type: 3}
+  - {fileID: 8300000, guid: b464e4a356bcd7c49bf1640497ea6c00, type: 3}
 --- !u!82 &701885296
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2079,11 +2079,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoundEffectLibrary
   soundEffectGroups:
   - name: hit
-    clips:
-    - {fileID: 8300000, guid: 72a8cd89a7cf80642bb0a5d24bce6440, type: 3}
+    clip: {fileID: 8300000, guid: f7a581e8027847446bf01b92a6dda7c8, type: 3}
+  - name: bounce
+    clip: {fileID: 8300000, guid: 535eb9fab851a9f46aaed4e7f5866f22, type: 3}
   - name: shatter
-    clips:
-    - {fileID: 8300000, guid: 876cadd621bf52c42888c9c8479a6ad4, type: 3}
+    clip: {fileID: 8300000, guid: 876cadd621bf52c42888c9c8479a6ad4, type: 3}
 --- !u!82 &2073292799
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2290,7 +2290,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 440811277}
   - {fileID: 2073292800}
-  - {fileID: 1889045967}
   - {fileID: 701885294}
+  - {fileID: 1889045967}
   - {fileID: 190289110}
   - {fileID: 786464473}

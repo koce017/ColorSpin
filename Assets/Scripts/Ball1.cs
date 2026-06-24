@@ -38,7 +38,7 @@ public class Ball1 : Ball
         if (other.CompareTag(currentColorName))
         {
             SetRandomColor();
-            SfxManager.Instance.Play("hit");
+            SfxManager.Instance.Play("bounce");
             GameManager.Instance.IncreaseScore();
             other.GetComponentInParent<Circle>().Bounce();
             rigidbody2D.linearVelocity = new Vector2(rigidbody2D.linearVelocity.x, 0f);
