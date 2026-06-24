@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class Ball2 : MonoBehaviour
+public class Ball3 : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private Color cyanColor;
     [SerializeField] private Color yellowColor;
-    [SerializeField] private Color pinkColor;
-    [SerializeField] private Color purpleColor;
+    [SerializeField] private Color greenColor;
+    [SerializeField] private Color redColor;
     [SerializeField] private GameObject shatterEffect;
     
     private string currentColorName;
@@ -14,10 +14,12 @@ public class Ball2 : MonoBehaviour
 
     private bool collidedOnce;
 
+    private new Rigidbody2D rigidbody2D;
     private SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
+        rigidbody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -26,9 +28,9 @@ public class Ball2 : MonoBehaviour
         SetRandomColor();
     }
 
-    private void Update()
-    {
-        transform.position = Vector3.MoveTowards(transform.position, Vector3.zero, speed * Time.deltaTime);
+    private void FixedUpdate()
+    {   
+        rigidbody2D.linearVelocity = Vector2.left * speed;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -40,14 +42,13 @@ public class Ball2 : MonoBehaviour
 
         if (other.CompareTag(currentColorName))
         {
-            SpawnManager2.Instance.Hit();
             GameManager.Instance.IncreaseScore();
             SfxManager.Instance.Play("hit");
         }
         else
         {
             InstaniateShatterEffect();
-            SpawnManager2.Instance.Disable();
+            SpawnManager3.Instance.Disable();
             GameManager.Instance.EndGame();
             SfxManager.Instance.Play("shatter");
         }
@@ -73,8 +74,8 @@ public class Ball2 : MonoBehaviour
                 currentColorValue = cyanColor;
                 break;
             case 1:
-                currentColorName = "Purple";
-                currentColorValue = purpleColor;
+                currentColorName = "Green";
+                currentColorValue = greenColor;
                 break;
             case 2:
                 currentColorName = "Yellow";
@@ -82,12 +83,11 @@ public class Ball2 : MonoBehaviour
                 break;
             case 3:
             default:
-                currentColorName = "Pink";
-                currentColorValue = pinkColor;
+                currentColorName = "Red";
+                currentColorValue = redColor;
                 break;
         }
 
         spriteRenderer.color = currentColorValue;
-        GameManager.Instance.UpdateScoreColor(currentColorValue);
     }
 }

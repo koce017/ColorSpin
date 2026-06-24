@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1315592014377178905}
   - component: {fileID: 6358260331564527875}
   - component: {fileID: 1864257339067318801}
-  - component: {fileID: 119597832836176071}
+  - component: {fileID: -8621360548098469694}
   m_Layer: 0
-  m_Name: Ball
+  m_Name: Ball3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,7 +145,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -157,7 +157,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &119597832836176071
+--- !u!114 &-8621360548098469694
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,15 +166,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8484987115672482159}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f0eb3af749de7c45b1121650c81c210, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f8b0fe1927583f4594b5c13bed50a97, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Ball
-  jumpForce: 8
-  rigidbodyTimer: 1
+  m_EditorClassIdentifier: Assembly-CSharp::Ball3
+  speed: 6
+  cyanColor: {r: 0, g: 0.48235297, b: 1, a: 1}
+  yellowColor: {r: 0.9921569, g: 0.8862746, b: 0, a: 1}
+  greenColor: {r: 0.37254903, g: 1, b: 0.27058825, a: 1}
   redColor: {r: 0.9960785, g: 0.03529412, b: 0, a: 1}
-  cyanColor: {r: 0, g: 0.68235296, b: 0.9490197, a: 1}
-  greenColor: {r: 0.3647059, g: 0.9960785, b: 0, a: 1}
-  purpleColor: {r: 0.6901961, g: 0, b: 0.9960785, a: 1}
-  yellowColor: {r: 0.9921569, g: 0.89019614, b: 0, a: 1}
-  orangeColor: {r: 0.9960785, g: 0.57254905, b: 0, a: 1}
   shatterEffect: {fileID: 6579836612414868694, guid: 17cdded338773394692cc6f4f5a103d4, type: 3}

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Linq;
 using UnityEngine;
 
-public class SpawnManager : MonoBehaviour
+public class SpawnManager2 : MonoBehaviour
 {
-    public static SpawnManager Instance { get; private set; }
+    public static SpawnManager2 Instance { get; private set; }
 
     [SerializeField] private float secondBallDelay;
     [SerializeField] private float secondBallChance;
