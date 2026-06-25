@@ -3,7 +3,7 @@ using UnityEngine;
 public class Ball3 : Ball
 {
     [SerializeField] private float speed;
-    [SerializeField] private Color cyanColor;
+    [SerializeField] private Color blueColor;
     [SerializeField] private Color yellowColor;
     [SerializeField] private Color greenColor;
     [SerializeField] private Color redColor;
@@ -50,8 +50,8 @@ public class Ball3 : Ball
         switch (Random.Range(0, 4))
         {
             case 0:
-                currentColorName = "Cyan";
-                currentColorValue = cyanColor;
+                currentColorName = "Blue";
+                currentColorValue = blueColor;
                 break;
             case 1:
                 currentColorName = "Green";

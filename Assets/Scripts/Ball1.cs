@@ -6,7 +6,7 @@ public class Ball1 : Ball
     [SerializeField] private float rigidbodyTimer;
 
     [SerializeField] private Color redColor;
-    [SerializeField] private Color cyanColor;
+    [SerializeField] private Color blueColor;
     [SerializeField] private Color greenColor;
     [SerializeField] private Color purpleColor;
     [SerializeField] private Color yellowColor;
@@ -62,8 +62,8 @@ public class Ball1 : Ball
                 currentColorValue = redColor;
                 break;
             case 1:
-                currentColorName = "Cyan";
-                currentColorValue = cyanColor;
+                currentColorName = "Blue";
+                currentColorValue = blueColor;
                 break;
             case 2:
                 currentColorName = "Green";

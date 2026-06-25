@@ -128,133 +128,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ColoredCircle_0
+      name: Game1CIrcle_0
       rect:
         serializedVersion: 2
-        x: 41
-        y: 289
-        width: 132
-        height: 111
+        x: 130
+        y: 575
+        width: 265
+        height: 195
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 83e93fa4fd2d39c60800000000000000
-      internalID: 7823828834149703224
+      spriteID: 4654f0a4bab4dd149a9a4e285c54c4c8
+      internalID: 913024279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ColoredCircle_1
+      name: Game1CIrcle_1
       rect:
         serializedVersion: 2
-        x: 219
-        y: 289
-        width: 132
-        height: 111
+        x: 450
+        y: 575
+        width: 265
+        height: 195
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 59bfd7d026f923c80800000000000000
-      internalID: -8344431916082136171
+      spriteID: d26f94aa9d8b18c468cf87bb866c62e7
+      internalID: 648737334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ColoredCircle_2
+      name: Game1CIrcle_2
       rect:
         serializedVersion: 2
-        x: 11
-        y: 124
-        width: 49
-        height: 152
+        x: 669
+        y: 273
+        width: 116
+        height: 302
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 201aa23ca4d2e4c80800000000000000
-      internalID: -8336676061091028734
+      spriteID: 7f47c1a536a70794f8df66957bf2871f
+      internalID: -397165524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ColoredCircle_3
+      name: Game1CIrcle_3
       rect:
         serializedVersion: 2
-        x: 51
-        y: 23
-        width: 132
-        height: 93
+        x: 65
+        y: 269
+        width: 116
+        height: 302
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2044444a64780d8b0800000000000000
-      internalID: -5129451238101597182
+      spriteID: 2614ff1454f37894da6d84543894d337
+      internalID: -993289339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ColoredCircle_4
+      name: Game1CIrcle_4
       rect:
         serializedVersion: 2
-        x: 213
-        y: 23
-        width: 132
-        height: 94
+        x: 135
+        y: 86
+        width: 265
+        height: 195
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2284c9b2a908fa340800000000000000
-      internalID: 4877258321110517794
+      spriteID: 7b4e092ecefaabd499c7dc08e935bcc7
+      internalID: 932105700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ColoredCircle_5
+      name: Game1CIrcle_5
       rect:
         serializedVersion: 2
-        x: 323
-        y: 124
-        width: 55
-        height: 152
+        x: 467
+        y: 81
+        width: 265
+        height: 195
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 38c99a6b556b87bf0800000000000000
-      internalID: -326310493731316605
+      spriteID: f922917d6d87d954884a9a5dd7eb9135
+      internalID: 1456972040
       vertices: []
       indices: 
       edges: []
@@ -271,14 +271,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ColoredCircle_0: 7823828834149703224
-      ColoredCircle_1: -8344431916082136171
-      ColoredCircle_2: -8336676061091028734
-      ColoredCircle_3: -5129451238101597182
-      ColoredCircle_4: 4877258321110517794
-      ColoredCircle_5: -326310493731316605
+      Game1CIrcle_0: 913024279
+      Game1CIrcle_1: 648737334
+      Game1CIrcle_2: -397165524
+      Game1CIrcle_3: -993289339
+      Game1CIrcle_4: 932105700
+      Game1CIrcle_5: 1456972040
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
