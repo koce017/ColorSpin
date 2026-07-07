@@ -30,7 +30,10 @@ public class Ball3 : Ball
     private void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(gameObject);
-        if (other.CompareTag(currentColorName))
+
+        var arcColor = other.GetComponent<SpriteRenderer>().color;  
+
+        if (currentColor.Equals(arcColor))
         {
             SfxManager.Instance.Play("hit");
             GameManager.Instance.IncreaseScore();
@@ -47,27 +50,7 @@ public class Ball3 : Ball
 
     private void SetRandomColor()
     {
-        switch (Random.Range(0, 4))
-        {
-            case 0:
-                currentColorName = "Blue";
-                currentColorValue = blueColor;
-                break;
-            case 1:
-                currentColorName = "Green";
-                currentColorValue = greenColor;
-                break;
-            case 2:
-                currentColorName = "Yellow";
-                currentColorValue = yellowColor;
-                break;
-            case 3:
-            default:
-                currentColorName = "Red";
-                currentColorValue = redColor;
-                break;
-        }
-
-        spriteRenderer.color = currentColorValue;
+        currentColor = ColorManager.Instance.GetRandomColor();
+        spriteRenderer.color = currentColor;
     }
 }

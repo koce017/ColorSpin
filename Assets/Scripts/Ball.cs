@@ -4,8 +4,7 @@ public class Ball : MonoBehaviour
 {
     [SerializeField] protected GameObject shatterEffect;
     
-    protected string currentColorName;
-    protected Color currentColorValue;
+    protected Color currentColor;
 
     protected void InstaniateShatterEffect()
     {
@@ -13,7 +12,7 @@ public class Ball : MonoBehaviour
         var ps = effect.GetComponent<ParticleSystem>();
 
         var main = ps.main;
-        main.startColor = currentColorValue;
+        main.startColor = currentColor;
 
         ps.Play();
     }

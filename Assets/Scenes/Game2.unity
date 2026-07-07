@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 8277338}
   - component: {fileID: 8277339}
   m_Layer: 0
-  m_Name: Yellow
+  m_Name: Arc
   m_TagString: Yellow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -378,6 +378,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108347702}
   m_CullTransparentMesh: 1
+--- !u!1 &167289084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 167289086}
+  - component: {fileID: 167289085}
+  m_Layer: 0
+  m_Name: Color Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &167289085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167289084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec10db6199788b4f9c701d5f4444ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorManager
+  colors:
+  - {r: 0.20784315, g: 0.8862746, b: 0.9450981, a: 1}
+  - {r: 0.96470594, g: 0.8745099, b: 0.054901965, a: 1}
+  - {r: 0.54901963, g: 0.07450981, b: 0.9803922, a: 1}
+  - {r: 1, g: 0, b: 0.5019608, a: 1}
+  arcs:
+  - {fileID: 1488506694}
+  - {fileID: 8277338}
+  - {fileID: 1382518129}
+  - {fileID: 1203188191}
+--- !u!4 &167289086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167289084}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &207609422
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,7 +1089,7 @@ GameObject:
   - component: {fileID: 1203188191}
   - component: {fileID: 1203188192}
   m_Layer: 0
-  m_Name: Purple
+  m_Name: Arc
   m_TagString: Purple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1320,7 +1374,7 @@ GameObject:
   - component: {fileID: 1382518129}
   - component: {fileID: 1382518130}
   m_Layer: 0
-  m_Name: Pink
+  m_Name: Arc
   m_TagString: Pink
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1505,7 +1559,7 @@ GameObject:
   - component: {fileID: 1488506694}
   - component: {fileID: 1488506695}
   m_Layer: 0
-  m_Name: Cyan
+  m_Name: Arc
   m_TagString: Cyan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2046,6 +2100,7 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 1663387459}
+  - {fileID: 167289086}
   - {fileID: 956193886}
   - {fileID: 255517840}
   - {fileID: 1317830213}

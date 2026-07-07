@@ -34,7 +34,9 @@ public class Ball2 : Ball
         Destroy(gameObject);
         oneTriggerActivated = true;
 
-        if (other.CompareTag(currentColorName))
+        var arcColor = other.GetComponent<SpriteRenderer>().color;  
+
+        if (currentColor.Equals(arcColor))
         {
             SpawnManager2.Instance.Hit();
             SfxManager.Instance.Play("hit");
@@ -52,28 +54,8 @@ public class Ball2 : Ball
 
     private void SetRandomColor()
     {
-        switch (Random.Range(0, 4))
-        {
-            case 0:
-                currentColorName = "Cyan";
-                currentColorValue = cyanColor;
-                break;
-            case 1:
-                currentColorName = "Purple";
-                currentColorValue = purpleColor;
-                break;
-            case 2:
-                currentColorName = "Yellow";
-                currentColorValue = yellowColor;
-                break;
-            case 3:
-            default:
-                currentColorName = "Pink";
-                currentColorValue = pinkColor;
-                break;
-        }
-
-        spriteRenderer.color = currentColorValue;
-        GameManager.Instance.UpdateScoreColor(currentColorValue);
+        currentColor = ColorManager.Instance.GetRandomColor();
+        spriteRenderer.color = currentColor;
+        GameManager.Instance.UpdateScoreColor(currentColor);
     }
 }
