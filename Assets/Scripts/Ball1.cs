@@ -4,13 +4,6 @@ public class Ball1 : Ball
 {
     [SerializeField] private float jumpForce;
     [SerializeField] private float rigidbodyTimer;
-
-    [SerializeField] private Color redColor;
-    [SerializeField] private Color blueColor;
-    [SerializeField] private Color greenColor;
-    [SerializeField] private Color purpleColor;
-    [SerializeField] private Color yellowColor;
-    [SerializeField] private Color orangeColor;
     
     private new Rigidbody2D rigidbody2D;
     private SpriteRenderer spriteRenderer;

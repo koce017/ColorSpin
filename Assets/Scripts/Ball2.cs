@@ -3,10 +3,6 @@ using UnityEngine;
 public class Ball2 : Ball
 {
     [SerializeField] private float speed;
-    [SerializeField] private Color cyanColor;
-    [SerializeField] private Color yellowColor;
-    [SerializeField] private Color pinkColor;
-    [SerializeField] private Color purpleColor;
 
     private bool oneTriggerActivated;
 

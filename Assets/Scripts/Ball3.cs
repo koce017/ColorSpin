@@ -3,10 +3,6 @@ using UnityEngine;
 public class Ball3 : Ball
 {
     [SerializeField] private float speed;
-    [SerializeField] private Color blueColor;
-    [SerializeField] private Color yellowColor;
-    [SerializeField] private Color greenColor;
-    [SerializeField] private Color redColor;
 
     private new Rigidbody2D rigidbody2D;
     private SpriteRenderer spriteRenderer;
