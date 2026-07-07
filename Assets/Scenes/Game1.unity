@@ -1260,7 +1260,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 256, y: 65}
-  m_SizeDelta: {x: 150, y: 120}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1169078488
 MonoBehaviour:
@@ -1674,13 +1674,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ec10db6199788b4f9c701d5f4444ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColorManager
-  colors:
-  - {r: 0.6901961, g: 0, b: 0.9960785, a: 1}
-  - {r: 1, g: 0.57254905, b: 0, a: 1}
-  - {r: 0.9960785, g: 0.03529412, b: 0, a: 1}
-  - {r: 0.9921569, g: 0.8862746, b: 0, a: 1}
-  - {r: 0.37254903, g: 1, b: 0, a: 1}
-  - {r: 0, g: 0.48235297, b: 0.9960785, a: 1}
   arcs:
   - {fileID: 1618908984}
   - {fileID: 1435411453}
@@ -1688,6 +1681,13 @@ MonoBehaviour:
   - {fileID: 835767692}
   - {fileID: 397106223}
   - {fileID: 620190157}
+  colors:
+  - {r: 0.6901961, g: 0, b: 0.9960785, a: 1}
+  - {r: 1, g: 0.57254905, b: 0, a: 1}
+  - {r: 0.9960785, g: 0.03529412, b: 0, a: 1}
+  - {r: 0.9921569, g: 0.8862746, b: 0, a: 1}
+  - {r: 0.37254903, g: 1, b: 0, a: 1}
+  - {r: 0, g: 0.48235297, b: 0.9960785, a: 1}
 --- !u!4 &1500590307
 Transform:
   m_ObjectHideFlags: 0
@@ -1740,7 +1740,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: -256, y: 65}
-  m_SizeDelta: {x: 150, y: 120}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1604574618
 MonoBehaviour:
